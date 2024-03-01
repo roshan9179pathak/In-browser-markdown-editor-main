@@ -1,0 +1,25 @@
+<% layout('layout/boilerplate') -%>
+<link rel="stylesheet" href="/css/index.css" />
+
+<div class="landing-page flex flex-dir-col flex-ai-c">
+    <div class="landing-page-nav flex flex-jc-sb flex-ai-c">
+        <a href="/"><img class="logo" src="/img/logo.png" alt="logo" /></a>
+        <a
+            class="landing-page-login-button flex flex-ai-c"
+            href="/accounts/login"
+        >
+            <img src="/img/login-option.png" alt="login-option" /> LOGIN</a
+        >
+    </div>
+    <div class="landing-page-main flex flex-dir-col flex-jc-c flex-ai-c">
+        <h1>IN-BROWSER <span>MARKDOWN</span> EDITOR</h1>
+        <h2>The easy to use, markdown editor available online.</h2>
+        <a class="landing-page-register-button" href="/accounts/register"
+            >Register</a
+        >
+    </div>
+    <div class="landing-page-editor-screenshot-container">
+        <img src="/img/editor-screenshot.png" alt="editor-screenshot" />
+    </div>
+</div>
+<%- include('partials/footer'); -%>

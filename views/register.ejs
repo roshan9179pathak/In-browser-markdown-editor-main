@@ -1,0 +1,79 @@
+<% layout('layout/boilerplate') -%>
+<link rel="stylesheet" href="/css/accounts.css" />
+
+<div class="accounts-container flex flex-dir-col flex-jc-sb flex-ai-c">
+    <div class="accounts-header flex flex-jc-c flex-ai-c">
+        <a class="flex flex-jc-c flex-ai-c" href="/"
+            ><img class="logo" src="/img/logo.png" alt="logo"
+        /></a>
+    </div>
+    <div class="accounts-main-container">
+        <form action="/accounts/register" method="post" novalidate>
+            <div class="accounts-main flex flex-dir-col flex-jc-c flex-ai-c">
+                <h3>Register</h3>
+                <div class="flex flex-dir-col account-details-container">
+                    <label class="accounts-label" for="email">Email</label>
+                    <input
+                        class="accounts-input"
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    />
+                    <div class="email-error inline-error"></div>
+                </div>
+                <div class="flex flex-dir-col account-details-container">
+                    <label class="accounts-label" for="password"
+                        >Password</label
+                    >
+                    <input
+                        class="accounts-input password-input"
+                        type="password"
+                        id="password"
+                        name="password"
+                        minlength="8"
+                        required
+                    />
+                    <div class="password-error inline-error"></div>
+                </div>
+                <div class="flex flex-dir-col account-details-container">
+                    <label class="accounts-label" for="confirm-password"
+                        >Confirm Password</label
+                    >
+                    <input
+                        class="accounts-input confirm-password-input"
+                        type="password"
+                        id="confirm-password"
+                        required
+                    />
+                    <div class="confirm-password-error inline-error"></div>
+                </div>
+                <div class="flex flex-jc-c flex-ai-c account-details-container">
+                    <p class="accounts-link-text">
+                        Have an account?
+                        <a
+                            class="accounts-link-color-primary"
+                            href="/accounts/login"
+                            >Log in</a
+                        >
+                    </p>
+                </div>
+                <button class="accounts-button register-button" type="submit">
+                    Register
+                </button>
+                <hr class="accounts-container-hr" />
+                <a
+                    href="/accounts/login-with-google"
+                    class="login-with-google-button accounts-button flex flex-jc-c flex-ai-c"
+                >
+                    <img src="/img/google.png" alt="google" /> Log in with
+                    Google
+                </a>
+            </div>
+        </form>
+    </div>
+    <div></div>
+</div>
+<%- include('partials/footer'); -%>
+
+<script type="module" src="/js/formValidation.js"></script>
